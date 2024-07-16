@@ -18,11 +18,10 @@
 const data = [
   {
     id: 1,
-    section: "BS Computer Science 2-B",
-    email: "aedraventura@addu.edu.ph",
-    first_name: "Arielle",
-    last_name: "Aventura",
-    avatar: "images/aventuraImage.jpg",
+    email: "george.bluth@reqres.in",
+    first_name: "George",
+    last_name: "Bluth",
+    avatar: "https://reqres.in/img/faces/1-image.jpg",
   },
 ];
 
@@ -36,7 +35,6 @@ const methods = ()=>{
         postElement.innerHTML=`
         <img class="avatar" src="${postData.avatar}"></img>
         <p class="id"><b>#${postData.id}</p>
-        <p class="section">${postData.section}</p>
         <div class="name">
             <h3 class="first_name">${postData.first_name}</h3>
             <h3 class="last_name">${postData.last_name}</h3>
