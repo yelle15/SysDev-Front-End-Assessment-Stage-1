@@ -16,6 +16,8 @@ body{
     height: 30%;
     padding: 100px;
     animation: fade 1s ease-out forwards;
+    justify-content: center;
+    align-items: center;
 }
 
 .card{
