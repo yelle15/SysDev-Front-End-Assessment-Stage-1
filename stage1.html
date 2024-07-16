@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Development Front-End Technical Assessment</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--array-->
+    <div class="data_display">
+    </div>
+
+
+    <!--javascript-->
+<script>
+const data = [
+  {
+    id: 1,
+    section: "BS Computer Science 2-B",
+    email: "aedraventura@addu.edu.ph",
+    first_name: "Arielle",
+    last_name: "Aventura",
+    avatar: "images/aventuraImage.jpg",
+  },
+];
+
+const container = document.querySelector('.data_display')
+
+const methods = ()=>{
+    /*display for each data in the array*/
+    data.forEach(postData =>{
+        const postElement = document.createElement('div');
+        postElement.classList.add('card');
+        postElement.innerHTML=`
+        <img class="avatar" src="${postData.avatar}"></img>
+        <p class="id"><b>#${postData.id}</p>
+        <p class="section">${postData.section}</p>
+        <div class="name">
+            <h3 class="first_name">${postData.first_name}</h3>
+            <h3 class="last_name">${postData.last_name}</h3>
+        </div>
+        <p class="email"><a href="mailto:${postData.email}">${postData.email}</a></p>
+        `;
+        container.appendChild(postElement);
+    });
+};
+
+document.addEventListener('DOMContentLoaded', methods);
+
+</script>
+</body>
+</html>
+
